@@ -123,9 +123,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 Assets and snippets used in the project can be found in the **[video kit](https://jsm.dev/stocks-kit)**.
 
-<a href="https://jsm.dev/stocks-kit" target="_blank">
-</a>
-
 ## <a name="more">🚀 More</a>
 
 **Advance your skills with Next.js Pro Course**
