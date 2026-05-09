@@ -141,6 +141,18 @@
   }
 }
 
+@keyframes fluid-shift {
+  0% {
+    background-position: 50% 0%, 50% 50%;
+  }
+  50% {
+    background-position: 48% 0%, 56% 44%;
+  }
+  100% {
+    background-position: 52% 0%, 44% 56%;
+  }
+}
+
 @layer utilities {
   .container {
     @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
@@ -154,8 +166,34 @@
   .home-section {
     @apply w-full gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3;
   }
+  .fluid-page-bg {
+    @apply relative isolate overflow-hidden bg-gray-900;
+  }
+  .fluid-page-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, #111111 0%, #15191d 18%, #376de6 40%, #e182f2 56%, #ff1f7a 74%, #ff6a22 100%),
+      conic-gradient(from 160deg at 50% 54%, #0b0d10, #3b7cff, #ec7dff, #ff2467, #ff7a1c, #0b0d10);
+    background-size: 100% 120%, 150% 150%;
+    animation: fluid-shift 18s ease-in-out infinite alternate;
+  }
+  .fluid-page-bg::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.22) 34%, rgba(5, 5, 5, 0.12) 62%, rgba(5, 5, 5, 0.28) 100%),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 5px);
+    backdrop-filter: blur(38px) saturate(118%);
+  }
   .header {
-    @apply z-50 w-full h-[70px] bg-gray-800;
+    @apply z-50 w-full h-[70px] bg-gray-800/75 border-b border-white/10 backdrop-blur-xl;
   }
   .header-wrapper {
     @apply flex justify-between items-center px-6 py-4 text-gray-500;
