@@ -121,7 +121,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## <a name="links">🔗 Assets</a>
 
-Assets and snippets used in the project can be found in the 
 
 ## <a name="more">🚀 More</a>
 
