@@ -124,4 +124,3 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 **Advance your skills with Next.js Pro Course**
 
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure.
